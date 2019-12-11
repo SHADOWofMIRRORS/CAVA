@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D39DD308-50F5-470E-A07A-0593BB252907}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAVA</RootNamespace>
+    <AssemblyName>CAVA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Cava.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6298.4486, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6298.4486\lib\net35-client\CircularProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AppLocal, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Core, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.AnalysisServices.AppLocal.Tabular, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AL.cs" />
+    <Compile Include="ALM.cs" />
+    <Compile Include="Animator\Animation.cs" />
+    <Compile Include="Animator\Animator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Animator\Controller.cs" />
+    <Compile Include="Animator\DecorationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Animator\DoubleBitmapControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Animator\DoubleBitmapControl.Designer.cs" />
+    <Compile Include="Animator\DoubleBitmapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animator\DoubleBitmapForm.designer.cs" />
+    <Compile Include="Animator\Flags.cs" />
+    <Compile Include="Animator\PointFConverter.cs" />
+    <Compile Include="Animator\TabControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Animator\TabControlEx.Designer.cs" />
+    <Compile Include="Animator\TransfromHelper.cs" />
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="CAVADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAVADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewRadioButtonCell.cs" />
+    <Compile Include="DataGridViewRadioButtonCellLayout.cs" />
+    <Compile Include="DataGridViewRadioButtonColumn.cs" />
+    <Compile Include="Defence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Defence.Designer.cs">
+      <DependentUpon>Defence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LD.Designer.cs">
+      <DependentUpon>LD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reboot.cs" />
+    <Compile Include="EnterSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterSettings.Designer.cs">
+      <DependentUpon>EnterSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MESSAGEBOXFOLDER\BWT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MESSAGEBOXFOLDER\BWT.Designer.cs">
+      <DependentUpon>BWT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MESSAGEBOXFOLDER\CE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MESSAGEBOXFOLDER\CE.Designer.cs">
+      <DependentUpon>CE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enter.Designer.cs">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MESSAGEBOXFOLDER\EnterLock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MESSAGEBOXFOLDER\EnterLock.Designer.cs">
+      <DependentUpon>EnterLock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mini.Designer.cs">
+      <DependentUpon>mini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PupilEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PupilEnter.Designer.cs">
+      <DependentUpon>PupilEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PupilReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PupilReg.Designer.cs">
+      <DependentUpon>PupilReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task.Designer.cs">
+      <DependentUpon>Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\ShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\ShowImage.Designer.cs">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\TestOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\TestOpen.Designer.cs">
+      <DependentUpon>TestOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timer.Designer.cs">
+      <DependentUpon>Timer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAVATableAdapter.cs" />
+    <EmbeddedResource Include="Animator\DoubleBitmapForm.resx" />
+    <EmbeddedResource Include="Defence.resx">
+      <DependentUpon>Defence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterSettings.resx">
+      <DependentUpon>EnterSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LD.resx">
+      <DependentUpon>LD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MESSAGEBOXFOLDER\BWT.resx">
+      <DependentUpon>BWT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MESSAGEBOXFOLDER\CE.resx">
+      <DependentUpon>CE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enter.resx">
+      <DependentUpon>Enter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MESSAGEBOXFOLDER\EnterLock.resx">
+      <DependentUpon>EnterLock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mini.resx">
+      <DependentUpon>mini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PupilEnter.resx">
+      <DependentUpon>PupilEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PupilReg.resx">
+      <DependentUpon>PupilReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DoubleBitmapForm.resx" />
+    <EmbeddedResource Include="Task.resx">
+      <DependentUpon>Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\ShowImage.resx">
+      <DependentUpon>ShowImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\TestOpen.resx">
+      <DependentUpon>TestOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer.resx">
+      <DependentUpon>Timer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CAVADataSet.xsc">
+      <DependentUpon>CAVADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAVADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAVADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAVADataSet.xss">
+      <DependentUpon>CAVADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxMSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxSHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxSystemMonitor">
+      <Guid>{1B773E42-2509-11CF-942F-008029004347}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSComctlLib">
+      <Guid>{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="MSTSCLib">
+      <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="NetFwTypeLib">
+      <Guid>{58FBCF7C-E7A9-467C-80B3-FC65E8FCCA08}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SystemMonitor">
+      <Guid>{1B773E42-2509-11CF-942F-008029004347}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1376601709_1270.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Скрыть.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CavaPNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\383506_shutdown-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload-icon-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon-png-762.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icotn-png-762.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aromat_cofe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAVA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aromat_cofe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66374_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colorwheel-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cava.ico" />
+    <Content Include="MetroFramework.txt" />
+    <Content Include="readme.txt" />
+    <None Include="Resources\CTrue.png" />
+    <None Include="Resources\CFalse.png" />
+    <None Include="Resources\False.png" />
+    <None Include="Resources\True.png" />
+    <None Include="Resources\CAVA2.png" />
+    <None Include="Resources\CAVA_B.png" />
+    <None Include="Resources\icons8-checkmark-filled-500.png" />
+    <None Include="Resources\AL1.png" />
+    <None Include="Resources\show_password-5121.png" />
+    <None Include="Resources\173541.png" />
+    <None Include="Resources\373.png" />
+    <None Include="Resources\AL.png" />
+    <None Include="Resources\CAVAv.4.0B.png" />
+    <None Include="Resources\2000px-Noun_project_1162.png" />
+    <None Include="Resources\SettingsWasd2.png" />
+    <None Include="Resources\aa7.png" />
+    <None Include="Resources\computer-network.png" />
+    <None Include="Resources\icons8-Back Filled-100.png" />
+    <None Include="Resources\Cloud_sync.png" />
+    <None Include="Resources\Screenshot_1.png" />
+    <None Include="Resources\Screenshot_22.png" />
+    <None Include="Resources\500.png" />
+    <None Include="Resources\icons8-Long Arrow Down Filled-50.png" />
+    <None Include="Resources\icons8-Long Arrow Left Filled-50.png" />
+    <None Include="Resources\m.png" />
+    <None Include="Resources\Message.png" />
+    <None Include="Resources\Безымянный1.png" />
+    <None Include="Resources\CavaPNG2.png" />
+    <None Include="Resources\A5.png" />
+    <None Include="Resources\A4.png" />
+    <None Include="Resources\A3.png" />
+    <None Include="Resources\A2.png" />
+    <None Include="Resources\A1.png" />
+    <None Include="Resources\CavaPNG1.png" />
+    <None Include="Resources\111.png" />
+    <None Include="Resources\222.png" />
+    <None Include="Resources\Thentrovka1.png" />
+    <None Include="Resources\Thentrovka.png" />
+    <None Include="Resources\ghjkghjghjk.png" />
+    <None Include="Resources\CavaUnstPNG1.ico" />
+    <None Include="Resources\CavaUnstPNG.ico" />
+    <None Include="Resources\neonarrow.png" />
+    <None Include="Resources\home-icon-png-7621.png" />
+    <None Include="Resources\CAVA1.png" />
+    <None Include="Resources\computer-monitor-icon-29.png" />
+    <None Include="Resources\Информация-26.png" />
+    <None Include="Resources\ReadyУдалить.png" />
+    <None Include="Resources\Удалить.png" />
+    <None Include="Resources\Удалить Filled-1002.png" />
+    <None Include="Resources\Удалить Filled-1001.png" />
+    <None Include="Resources\Безымянныйj.png" />
+    <None Include="Resources\Удалить Filled-100.png" />
+    <None Include="Resources\xTg6RnK8c2.png" />
+    <None Include="Resources\xTg6RnK8c1.png" />
+    <None Include="Resources\xTg6RnK8c.png" />
+    <None Include="Resources\Screenshot_3.png" />
+    <None Include="Resources\Screenshot_21.png" />
+    <None Include="Resources\SettingsWasd -.png" />
+    <None Include="Resources\SettingsWasd1.png" />
+    <None Include="Resources\Screenshot_234.png" />
+    <None Include="Resources\SettingsWasd.png" />
+    <None Include="Resources\372.png" />
+    <None Include="Resources\371.png" />
+    <None Include="Resources\37.png" />
+    <None Include="Resources\17354.png" />
+    <None Include="Resources\show_password-512.png" />
+    <None Include="Resources\Безымянный.png" />
+    <None Include="Resources\61444.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
